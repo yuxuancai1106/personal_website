@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Yuxuan Cai - Personal Website</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <header>
+    <h1>Yuxuan Cai</h1>
+    <div class="contact-bar">
+      <a href="mailto:yuxuancai1106@berkeley.edu">Email</a>
+      <span class="separator">|</span>
+      <a href="https://github.com/yuxuancai1106" target="_blank">GitHub</a>
+      <span class="separator">|</span>
+      <a href="https://www.linkedin.com/in/yuxuan-cai-815558211/" target="_blank">LinkedIn</a>
+      <span class="separator">|</span>
+      <a href="https://drive.google.com/file/d/1LbUg5nyzmj5T95mwFtmYRI7-r22YJdqU/view?usp=sharing" target="_blank">Resume</a>
+    </div>
+    <nav>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+  </header>
+
+  <section>
+    <div class="about-container">
+      <div class="about-text">
+        <h2>About Me</h2>
+        <p>Welcome to my personal website! I'm Yuxuan Cai, a senior at UC Berkeley studying Computer Science and Applied Mathematics. I'm passionate about LLMs, multimodal AI and its applications.</p>
+        <p>I grew up in <span class="croatia-link" onclick="showMap()">Croatia 🇭🇷</span>, 
+           I can speak Chinese, English and Croatian fluently, and I can also speak a little bit of French.</p>
+        <p>In my free time, I like doing archery🏹, dancing, cooking, hanging out with friends and traveling.</p>
+        <p>Browse my <a href="gallery.html">Gallery</a> for some nice photos.</p>
+        <p>I'm currently looking for full-time opportunities starting May 2026. Feel free to contact me if you're interested in my skills and experience.</p>
+      </div>
+      <div class="profile-image">
+        <img src="media/profile.jpg" alt="Yuxuan Cai" class="profile-photo">
+      </div>
+    </div>
+  </section>
+
+  <section id="resume">
+    <h2>Resume</h2>
+    <p><a href="https://drive.google.com/file/d/1LbUg5nyzmj5T95mwFtmYRI7-r22YJdqU/view?usp=sharing" target="_blank">Download my resume (PDF)</a></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:yuxuancai1106@berkeley.edu">yuxuancai1106@berkeley.edu</a></p>
+    <p>GitHub: <a href="https://github.com/yuxuancai1106" target="_blank">https://github.com/yuxuancai1106</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/yuxuan-cai-815558211/" target="_blank">https://www.linkedin.com/in/yuxuan-cai-815558211/</a></p>
+  </section>
+
+  <!-- Map Modal -->
+  <div id="mapModal" class="map-modal">
+    <div class="map-content">
+      <span class="map-close" onclick="closeMap()">&times;</span>
+      <h3>Where is Croatia? 🇭🇷</h3>
+      <p>Croatia is located in Southeast Europe, on the Adriatic Sea. If you watch soccer, you might know Croatia from Luka Modric.</p>
+      <img src="media/croatia.png" alt="Map showing Croatia's location in Europe" class="map-image">
+      <p class="map-caption">Croatia highlighted in red on a map of Europe</p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 Yuxuan Cai</p>
+  </footer>
+
+  <script>
+    function showMap() {
+      document.getElementById('mapModal').style.display = 'block';
+    }
+    
+    function closeMap() {
+      document.getElementById('mapModal').style.display = 'none';
+    }
+    
+    // Close modal when clicking outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById('mapModal');
+      if (event.target == modal) {
+        modal.style.display = 'none';
+      }
+    }
+    
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape') {
+        closeMap();
+      }
+    });
+  </script>
+
+</body>
+</html>
